@@ -11,8 +11,8 @@ try:
 except:
     pass
 
-LAT = 45.073443
-LON = 7.543472
+LAT = 45.1384
+LON = 7.7684
 
 def interpella_gemini(dati_tendenza):
     api_key = os.getenv("GEMINI_API_KEY")
@@ -23,7 +23,7 @@ def interpella_gemini(dati_tendenza):
     oggi = datetime.now()
     
     prompt = f"""
-    Sei un meteorologo professionista. Scrivi una PANORAMICA SINTETICA (tendenza meteo) per Rivoli (TO) per i prossimi giorni.
+    Sei un meteorologo professionista. Scrivi una PANORAMICA SINTETICA (tendenza meteo) per Settimo (TO) per i prossimi giorni.
     Oggi è {oggi.strftime("%A %d %B")}. Il bollettino deve coprire ESCLUSIVAMENTE i giorni indicati nella tabella sottostante.
     
     REGOLE DI SCRITTURA (TENDENZA SETTIMANALE):
