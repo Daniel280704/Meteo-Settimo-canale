@@ -19,8 +19,8 @@ def interpella_gemini(dati_meteo, info_giornaliere):
     api_key = os.getenv("GEMINI_API_KEY")
     genai.configure(api_key=api_key)
     # MODELLO AGGIORNATO (Versione 1.5)
-    model = genai.GenerativeModel('models/gemini-3.1-flash-lite')
-    
+    model = genai.GenerativeModel('models/gemini-3-flash-preview')    
+
     oggi_str = datetime.now().strftime("%A %d %B")
     domani_str = (datetime.now() + timedelta(days=1)).strftime("%A %d %B")
     
