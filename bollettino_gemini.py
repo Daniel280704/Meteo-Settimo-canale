@@ -12,8 +12,8 @@ try:
 except:
     pass
 
-LAT = 45.073443
-LON = 7.543472
+LAT = 45.1384
+LON = 7.7684
 
 def interpella_gemini(dati_meteo, info_giornaliere):
     api_key = os.getenv("GEMINI_API_KEY")
@@ -25,7 +25,7 @@ def interpella_gemini(dati_meteo, info_giornaliere):
     domani_str = (datetime.now() + timedelta(days=1)).strftime("%A %d %B")
     
     prompt = f"""
-    Sei un meteorologo professionista. Scrivi un bollettino meteo discorsivo per Rivoli (TO) per le prossime 48 ore.
+    Sei un meteorologo professionista. Scrivi un bollettino meteo discorsivo per Settimo (TO) per le prossime 48 ore.
     Oggi è {oggi_str}, domani sarà {domani_str}.
     
     RIFERIMENTI UFFICIALI (Usa questi valori per le temperature min/max):
