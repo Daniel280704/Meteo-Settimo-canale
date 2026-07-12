@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 
 import google.generativeai as genai
 
-LAT = 45.07347491421504
-LON = 7.543461388723449
+LAT = 45.13473001892363
+LON = 7.773898554435003
 
 GIORNI_IT = {0: "lunedì", 1: "martedì", 2: "mercoledì", 3: "giovedì", 4: "venerdì", 5: "sabato", 6: "domenica"}
 MESI_IT = {1: "gennaio", 2: "febbraio", 3: "marzo", 4: "aprile", 5: "maggio", 6: "giugno", 
@@ -54,7 +54,7 @@ def interpella_gemini(dati_testuali, oggi_str, domani_str):
     model = genai.GenerativeModel('models/gemini-3.5-flash')
     
     prompt = f"""
-    Sei un meteorologo professionista. Il tuo compito è scrivere un bollettino discorsivo, fluido ed elegante per Rivoli (TO) partendo dalla sintesi oraria fornita.
+    Sei un meteorologo professionista. Il tuo compito è scrivere un bollettino discorsivo, fluido ed elegante per Settimo (TO) partendo dalla sintesi oraria fornita.
     
     REGOLE FERREE (PENA IL FALLIMENTO):
     1. TITOLO: Inizia ESATTAMENTE con: **Aggiornamento meteo di {oggi_str}**
