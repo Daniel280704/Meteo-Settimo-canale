@@ -7,8 +7,8 @@ from datetime import datetime, timedelta
 from groq import Groq
 
 # Coordinate - Rivoli (TO)
-LAT = 45.0734521841099
-LON = 7.543386286825349
+LAT = 45.13473001892363
+LON = 7.773898554435003
 
 def scomposizione_vettoriale(speed_kmh, direction_deg):
     """Converte velocità e direzione in vettori U e V (m/s)."""
@@ -165,7 +165,7 @@ def interpella_groq(report_tecnico, giorno_str):
     client = Groq(api_key=api_key)
     
     prompt = f"""
-    Sei un meteorologo che deve comunicare un avviso rapido al pubblico generale. Il tuo compito è stilare un BREVE riassunto discorsivo sui rischi principali in caso di temporali per il giorno {giorno_str} a Rivoli (TO).
+    Sei un meteorologo che deve comunicare un avviso rapido al pubblico generale. Il tuo compito è stilare un BREVE riassunto discorsivo sui rischi principali in caso di temporali per il giorno {giorno_str} a Settimo (TO).
 
     DATI ESTRATTI NELLA FINESTRA PRECIPITATIVA (Media dei parametri):
     {report_tecnico}
